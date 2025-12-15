@@ -1,6 +1,19 @@
-export const metadata = {
-  title: 'Contact - Selena\'s Furniture Store Guyana',
-  description: 'Get in touch with Selena\'s Furniture Store in Guyana for inquiries and orders.',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact | Selena's Furniture Store Guyana",
+  description:
+    "Contact Selena's Furniture Store in Lagrange, West Bank Demerara, Guyana for furniture inquiries, delivery details, and room planning support.",
+  openGraph: {
+    title: "Contact | Selena's Furniture Store Guyana",
+    description:
+      "Reach Selena's Furniture Store in Guyana by phone, email, WhatsApp, or Facebook to discuss products, availability, and delivery.",
+    url: '/contact',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function Contact() {

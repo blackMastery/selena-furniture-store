@@ -1,8 +1,25 @@
 'use client';
 
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { galleryImages } from './galleryData';
+
+export const metadata: Metadata = {
+  title: "Gallery | Selena's Furniture Store Guyana",
+  description:
+    "Browse the Selena's Furniture Store Guyana gallery featuring real rooms and showroom vignettes styled with our beds, sofas, storage, and dining pieces.",
+  openGraph: {
+    title: "Gallery | Selena's Furniture Store Guyana",
+    description:
+      "See how Selena's Furniture Store styles warm, natural rooms across Guyana with handcrafted furniture for living, dining, and bedrooms.",
+    url: '/gallery',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/gallery',
+  },
+};
 
 export default function Gallery() {
   return (

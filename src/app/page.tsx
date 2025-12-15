@@ -1,14 +1,38 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+const Galaxy = dynamic(() => import('../components/Galaxy'), {
+  ssr: false,
+});
 
 export default function Home() {
-
   return (
-    <div className="min-h-screen bg-brand-sand">
+    <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-cream">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 py-16 md:flex-row md:py-20">
+      <section className="relative overflow-hidden min-h-[600px] md:min-h-[700px]">
+        {/* Galaxy background */}
+        <div className="absolute inset-0 -z-20 h-full w-full">
+          <Galaxy
+            density={1.2}
+            starSpeed={0.6}
+            speed={0.8}
+            glowIntensity={0.5}
+            saturation={0.2}
+            twinkleIntensity={0.3}
+            rotationSpeed={0.08}
+            mouseInteraction
+            mouseRepulsion={false}
+            autoCenterRepulsion={0.5}
+            className="h-full w-full"
+          />
+        </div>
+
+        {/* Warm overlay for readability and brand feel */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-brand-cream/50 via-brand-cream/40 to-brand-sand/50" />
+
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 py-16 md:flex-row md:py-20">
           <div className="w-full md:w-1/2">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-olive">
               Handcrafted in Guyana
@@ -31,7 +55,7 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white">
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl/10">
               <Image
                 src="/window.svg"
                 alt="Warm living room furniture vignette"
@@ -46,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-16 md:py-20">
+      <section className="bg-brand-sand py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>

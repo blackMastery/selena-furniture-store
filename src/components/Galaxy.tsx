@@ -187,6 +187,7 @@ interface GalaxyProps {
   repulsionStrength?: number;
   autoCenterRepulsion?: number;
   transparent?: boolean;
+  className?: string;
 }
 
 export default function Galaxy({

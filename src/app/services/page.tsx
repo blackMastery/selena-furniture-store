@@ -1,6 +1,19 @@
-export const metadata = {
-  title: 'Services - Selena\'s Furniture Store Guyana',
-  description: 'Our services: Furniture sales, delivery, and custom options in Guyana.',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Services | Selena's Furniture Store Guyana",
+  description:
+    "Explore services from Selena's Furniture Store Guyana, including furniture selection support, delivery & in-home setup, and custom considerations for your space.",
+  openGraph: {
+    title: "Services | Selena's Furniture Store Guyana",
+    description:
+      "From furniture selection to delivery and setup, Selena's Furniture Store supports you at every step of furnishing your home in Guyana.",
+    url: '/services',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 export default function Services() {

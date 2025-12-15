@@ -1,6 +1,19 @@
-export const metadata = {
-  title: 'About - Selena\'s Furniture Store Guyana',
-  description: 'Learn about Selena\'s Furniture Store, your trusted source for affordable furniture in Georgetown, Guyana.',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About | Selena's Furniture Store Guyana",
+  description:
+    "Learn about Selena's Furniture Store in Lagrange, West Bank Demerara—your trusted source for handcrafted, affordable furniture across Guyana.",
+  openGraph: {
+    title: "About | Selena's Furniture Store Guyana",
+    description:
+      "Discover the story and values behind Selena's Furniture Store, a neighborhood shop curating durable, comfortable furniture for homes across Guyana.",
+    url: '/about',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function About() {
