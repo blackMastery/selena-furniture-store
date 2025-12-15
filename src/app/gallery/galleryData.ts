@@ -1,6 +1,7 @@
 export type GalleryImage = {
   slug: string;
-  src: string;
+  images: string[];
+  primaryImage: number;
   title: string;
   description: string;
 };
@@ -8,25 +9,29 @@ export type GalleryImage = {
 export const galleryImages: GalleryImage[] = [
   {
     slug: 'warm-living-room-vignette',
-    src: '/gallery/WhatsApp Image 2025-12-15 at 14.47.34.jpeg',
+    images: ['/gallery/warm-living-room-vignette/primary.jpeg'],
+    primaryImage: 0,
     title: 'Warm living room vignette',
     description: 'Soft seating and warm wood tones perfect for everyday gathering.',
   },
   {
     slug: 'cozy-bedroom-corner',
-    src: '/gallery/WhatsApp Image 2025-12-15 at 14.47.34 (1).jpeg',
+    images: ['/gallery/cozy-bedroom-corner/primary.jpeg'],
+    primaryImage: 0,
     title: 'Cozy bedroom corner',
     description: 'Layered textiles and a grounded bed frame for restful nights.',
   },
   {
     slug: 'showroom-display',
-    src: '/gallery/WhatsApp Image 2025-12-15 at 14.47.34 (2).jpeg',
+    images: ['/gallery/showroom-display/primary.jpeg'],
+    primaryImage: 0,
     title: 'Showroom display',
     description: 'Curated mix of storage, seating, and accent pieces in the showroom.',
   },
   {
     slug: 'dining-and-storage-pairing',
-    src: '/gallery/WhatsApp Image 2025-12-15 at 14.47.35.jpeg',
+    images: ['/gallery/dining-and-storage-pairing/primary.jpeg'],
+    primaryImage: 0,
     title: 'Dining and storage pairing',
     description: 'Everyday dining setup with practical, beautiful storage alongside.',
   },

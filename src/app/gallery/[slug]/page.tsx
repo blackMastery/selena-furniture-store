@@ -1,7 +1,8 @@
-import Image from 'next/image';
+import { use } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { galleryImages } from '../galleryData';
+import ImageGallery from '@/components/ImageGallery';
 
 type GalleryDetailPageProps = {
   params: Promise<{
@@ -9,8 +10,8 @@ type GalleryDetailPageProps = {
   }>;
 };
 
-export default async function GalleryDetailPage({ params }: GalleryDetailPageProps) {
-  const { slug } = await params;
+export default function GalleryDetailPage({ params }: GalleryDetailPageProps) {
+  const { slug } = use(params);
   const item = galleryImages.find((image) => image.slug === slug);
 
   if (!item) {
@@ -28,18 +29,11 @@ export default async function GalleryDetailPage({ params }: GalleryDetailPagePro
         </Link>
 
         <div className="mt-6 grid gap-10 lg:mt-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-start">
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white">
-            <div className="relative h-[320px] w-full sm:h-[420px] md:h-[480px]">
-              <Image
-                src={item.src}
-                alt={item.title}
-                fill
-                sizes="(min-inline-size: 1024px) 60vw, 100vw"
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </div>
+          <ImageGallery
+            images={item.images}
+            primaryIndex={item.primaryImage}
+            productTitle={item.title}
+          />
 
           <div className="space-y-4 md:space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-olive">

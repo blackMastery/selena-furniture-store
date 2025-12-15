@@ -40,7 +40,7 @@ export default function Gallery() {
               <article className="card-elevated overflow-hidden p-0 h-full">
                 <div className="relative h-56 w-full sm:h-64">
                   <Image
-                    src={img.src}
+                    src={img.images[img.primaryImage]}
                     alt={img.title}
                     fill
                     sizes="(min-inline-size: 1024px) 33vw, (min-inline-size: 640px) 50vw, 100vw"

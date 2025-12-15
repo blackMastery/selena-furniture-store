@@ -33,7 +33,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-brand-cream/50 via-brand-cream/40 to-brand-sand/50" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 py-16 md:flex-row md:py-20">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 bg-brand-cream p-10 rounded-3xl" >
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-olive">
               Handcrafted in Guyana
             </p>
@@ -55,7 +55,7 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl/10">
+            {/* <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl/10">
               <Image
                 src="/window.svg"
                 alt="Warm living room furniture vignette"
@@ -64,7 +64,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 priority
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
