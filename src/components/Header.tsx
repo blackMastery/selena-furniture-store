@@ -35,7 +35,7 @@ export default function Header() {
             <span className="text-sm font-semibold tracking-wide text-brand-charcoal">
               Selena&apos;s Furniture
             </span>
-            <span className="text-xs text-slate-500">Lagrange, West Bank Demerara</span>
+            <span className="text-xs text-slate-500"> Parfait Harmony, West Bank Demerara</span>
           </div>
         </Link>
 
