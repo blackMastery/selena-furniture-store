@@ -1,4 +1,5 @@
 import { use } from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { galleryImages } from '../galleryData';
@@ -9,6 +10,59 @@ type GalleryDetailPageProps = {
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return galleryImages.map((image) => ({
+    slug: image.slug,
+  }));
+}
+
+export function generateMetadata(
+  { params }: { params: { slug: string } }
+): Metadata {
+  const { slug } = params;
+  const item = galleryImages.find((image) => image.slug === slug);
+
+  if (!item) {
+    return {
+      title: "Gallery item not found | Selena's Furniture Store Guyana",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const baseTitle = "Selena's Furniture Store Guyana";
+  const title = `${item.title} | Gallery | ${baseTitle}`;
+  const description = `${item.description} Styled with handcrafted furniture from Selena's Furniture Store in Lagrange, West Bank Demerara, Guyana.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: `/gallery/${slug}`,
+      images: item.images.map((url) => ({
+        url,
+        width: 1200,
+        height: 630,
+        alt: item.title,
+      })),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: item.images,
+    },
+    alternates: {
+      canonical: `/gallery/${slug}`,
+    },
+  };
+}
 
 export default function GalleryDetailPage({ params }: GalleryDetailPageProps) {
   const { slug } = use(params);
