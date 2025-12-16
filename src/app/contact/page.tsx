@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Contact | Selena's Furniture Store Guyana",
   description:
-    "Contact Selena's Furniture Store in Lagrange, West Bank Demerara, Guyana for furniture inquiries, delivery details, and room planning support.",
+    "Contact Selena's Furniture Store at 2737 Recht Door Zee, Block 2 La Parfait Harmony, West Bank Demerara, Guyana for furniture inquiries, delivery details, and room planning support. Open Monday to Friday, 8:00am to 5:00pm.",
   openGraph: {
     title: "Contact | Selena's Furniture Store Guyana",
     description:
-      "Reach Selena's Furniture Store in Guyana by phone, email, WhatsApp, or Facebook to discuss products, availability, and delivery.",
+      "Reach Selena's Furniture Store in Guyana by phone, email, WhatsApp, or Facebook to discuss products, availability, delivery, and opening hours. Open Monday to Friday, 8:00am to 5:00pm.",
     url: '/contact',
     type: 'website',
   },
@@ -36,7 +36,8 @@ export default function Contact() {
             <h2 className="text-xl font-semibold text-brand-charcoal">Visit or call us</h2>
             <p>We&apos;d love to hear from you.</p>
             <p>
-              <span className="font-semibold">Address:</span> Lot 52, Lagrange, West Bank Demerara, Guyana
+              <span className="font-semibold">Address:</span> 2737 Recht Door Zee, Block 2 La Parfait Harmony, West Bank
+              Demerara, Guyana
             </p>
             <p>
               <span className="font-semibold">Phone:</span> +592 681 7995
@@ -47,8 +48,7 @@ export default function Contact() {
 
             <div className="mt-6 space-y-1 text-sm text-slate-700">
               <h3 className="text-sm font-semibold text-brand-charcoal">Hours</h3>
-              <p>Monday – Saturday: 10am – 6pm</p>
-              <p>Sunday: 12pm – 5pm</p>
+            <p>Monday to Friday: 8:00am – 5:00pm</p>
             </div>
 
             <div className="mt-8">

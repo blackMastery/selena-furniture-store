@@ -87,7 +87,7 @@ export default function Footer() {
                   href="https://wa.me/5926817995"
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-primary w-full justify-center text-xs sm:text-sm"
+                  className="btn-primary w-full justify-center text-xs sm:text-sm whitespace-nowrap"
                 >
                   Chat on WhatsApp
                 </a>
@@ -95,14 +95,14 @@ export default function Footer() {
                   href="https://www.facebook.com/neilbestfurniture"
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-secondary w-full justify-center text-xs sm:text-sm"
+                  className="btn-secondary w-full justify-center text-xs sm:text-sm whitespace-nowrap"
                 >
                   Visit Facebook
                 </a>
               </div>
             </div>
             <div className="space-y-1 text-sm text-slate-600">
-              <p>Lot 52, Lagrange, West Bank Demerara, Guyana</p>
+              <p>2737 Recht Door Zee, Block 2 La Parfait Harmony, West Bank Demerara, Guyana</p>
               <p>+592 681 7995</p>
               <p>nathaneelbb@gmail.com</p>
             </div>

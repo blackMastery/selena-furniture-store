@@ -2,12 +2,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import { galleryImages } from './gallery/galleryData';
 
 const Galaxy = dynamic(() => import('../components/Galaxy'), {
   ssr: false,
 });
 
 export default function Home() {
+  const featuredImages = galleryImages.slice(0, 3);
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -109,6 +112,50 @@ export default function Home() {
                 <span className="mt-4 inline-block text-sm font-medium text-brand-olive">
                   View inspiration →
                 </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery preview */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <h2 className="text-3xl md:text-4xl">A glimpse from the gallery.</h2>
+              <p className="mt-2 max-w-xl text-sm text-slate-600 md:text-base">
+                See how real rooms come together with warm woods, soft fabrics, and storage that really works.
+              </p>
+            </div>
+            <Link href="/gallery" className="text-sm font-medium text-brand-olive underline-offset-4 hover:underline">
+              View the full gallery
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredImages.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/gallery/${item.slug}`}
+                className="card-elevated flex flex-col overflow-hidden"
+              >
+                <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl bg-slate-100">
+                  <Image
+                    src={item.images[item.primaryImage]}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-inline-size: 1024px) 33vw, (min-inline-size: 640px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold text-brand-charcoal">{item.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{item.description}</p>
+                  <span className="mt-4 inline-block text-sm font-medium text-brand-olive">
+                    View details →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

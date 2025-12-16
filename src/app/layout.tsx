@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title:
     "Selena's Furniture Store Guyana | Handcrafted Beds, Sofas & Home Furniture in Lagrange, West Bank Demerara",
   description:
-    "Selena's Furniture Store in Lagrange, West Bank Demerara offers thoughtfully made beds, sofas, storage and more—handcrafted for warm, comfortable homes across Guyana.",
+    "Selena's Furniture Store in Lagrange, West Bank Demerara offers thoughtfully made beds, sofas, storage and more—handcrafted for warm, comfortable homes across Guyana. Open Monday to Friday, 8:00am to 5:00pm.",
   openGraph: {
     title: "Selena's Furniture Store Guyana | Handcrafted Home Furniture",
     description:
-      "Explore beds, sofas, storage and dining furniture handcrafted for warm, natural homes across Guyana.",
+      "Explore beds, sofas, storage and dining furniture handcrafted for warm, natural homes across Guyana. Open Monday to Friday, 8:00am to 5:00pm.",
     url: '/',
     siteName: "Selena's Furniture Store Guyana",
     type: 'website',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Selena's Furniture Store Guyana | Handcrafted Home Furniture",
     description:
-      "Handcrafted, sustainable furniture for every room. Beds, sofas, storage and more in Lagrange, West Bank Demerara, Guyana.",
+      "Handcrafted, sustainable furniture for every room. Beds, sofas, storage and more in Lagrange, West Bank Demerara, Guyana. Open Monday to Friday, 8:00am to 5:00pm.",
     images: ['/logo.jpg'],
   },
   alternates: {
@@ -69,6 +69,19 @@ export default function RootLayout({
       <body className={`${inter.className} font-sans`}>
         <Header />
         <main className="min-h-screen">{children}</main>
+        <section
+          aria-label="Business opening hours"
+          className="border-t border-slate-200 bg-brand-sand/60"
+        >
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-4 py-4 text-sm text-slate-700 md:flex-row md:items-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-olive">
+              Opening Hours
+            </p>
+            <p className="text-sm">
+              Monday to Friday, <span className="font-medium">8:00am – 5:00pm</span>
+            </p>
+          </div>
+        </section>
         <Footer />
       </body>
     </html>
