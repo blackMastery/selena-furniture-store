@@ -17,10 +17,10 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata(
-  { params }: { params: { slug: string } }
-): Metadata {
-  const { slug } = params;
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
   const item = galleryImages.find((image) => image.slug === slug);
 
   if (!item) {
