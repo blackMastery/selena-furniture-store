@@ -44,7 +44,7 @@ export async function generateMetadata(
       title,
       description,
       type: 'article',
-      url: `/gallery/${slug}`,
+      url: `https://selenafurniturestore.com/gallery/${slug}`,
       images: item.images.map((url) => ({
         url,
         width: 1200,
@@ -59,7 +59,7 @@ export async function generateMetadata(
       images: item.images,
     },
     alternates: {
-      canonical: `/gallery/${slug}`,
+      canonical: `https://selenafurniturestore.com/gallery/${slug}`,
     },
   };
 }

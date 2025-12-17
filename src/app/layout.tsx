@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://selena-furniture-store.vercel.app'),
+  metadataBase: new URL('https://selenafurniturestore.com'),
   title:
     "Selena's Furniture Store Guyana | Handcrafted Beds, Sofas & Home Furniture in Lagrange, West Bank Demerara",
   description:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Selena's Furniture Store Guyana | Handcrafted Home Furniture",
     description:
       "Explore beds, sofas, storage and dining furniture handcrafted for warm, natural homes across Guyana. Open Monday to Friday, 8:00am to 5:00pm.",
-    url: '/',
+    url: 'https://selenafurniturestore.com/',
     siteName: "Selena's Furniture Store Guyana",
     type: 'website',
     locale: 'en_GY',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: ['/logo.jpg'],
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://selenafurniturestore.com/',
   },
   keywords: [
     "Selena's Furniture Store",
