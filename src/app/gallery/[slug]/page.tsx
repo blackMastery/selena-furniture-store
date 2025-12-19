@@ -99,6 +99,19 @@ export default function GalleryDetailPage({ params }: GalleryDetailPageProps) {
               durability, and a warm, grounded palette that works beautifully in everyday Guyanese homes.
             </p>
 
+            {item.details && item.details.length > 0 && (
+              <div className="mt-4 space-y-3 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 md:p-5">
+                <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                  Set Includes
+                </h2>
+                <ul className="list-disc space-y-1 pl-5">
+                  {item.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="mt-4 space-y-3 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 md:p-5">
               <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Styling Notes

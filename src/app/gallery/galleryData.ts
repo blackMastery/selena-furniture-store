@@ -4,6 +4,7 @@ export type GalleryImage = {
   primaryImage: number;
   title: string;
   description: string;
+  details?: string[];
 };
 
 export const galleryImages: GalleryImage[] = [
@@ -62,6 +63,9 @@ export const galleryImages: GalleryImage[] = [
     primaryImage: 0,
     title: 'Kitchen pantry storage',
     description: 'Organized pantry cabinetry with generous shelving for everyday kitchen essentials.',
+    details: [
+      'Size: 4ft length × 6ft height × 13" width',
+    ],
   },
   {
     slug: '9-drawer-chest',
@@ -87,6 +91,11 @@ export const galleryImages: GalleryImage[] = [
     primaryImage: 0,
     title: 'Bedroom set',
     description: 'Complete bedroom furniture collection with bed, dresser, and matching pieces for a cohesive look.',
+    details: [
+      'King size bed (76" × 80")',
+      'Two night stands',
+      'Closet (8ft × 8ft)',
+    ],
   },
   {
     slug: 'center-table',
@@ -138,6 +147,9 @@ export const galleryImages: GalleryImage[] = [
     primaryImage: 0,
     title: 'Single size bed with rail and storage',
     description: 'Compact single bed with safety rail and convenient underneath storage, ideal for children\'s rooms.',
+    details: [
+      'Size: 74" × 38"',
+    ],
   },
   {
     slug: 'wardrobe-4ft-by-6-5ft',
