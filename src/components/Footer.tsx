@@ -110,7 +110,20 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Selena&apos;s Furniture Store Guyana. All rights reserved.</p>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <p>&copy; {new Date().getFullYear()} Selena&apos;s Furniture Store Guyana. All rights reserved.</p>
+            <p>
+              Built by{' '}
+              <a
+                href="https://kevoncadogan.com"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-brand-olive"
+              >
+                kevoncadogan.com
+              </a>
+            </p>
+          </div>
           <div className="flex gap-4">
             <button type="button" className="hover:text-brand-olive">
               Privacy
